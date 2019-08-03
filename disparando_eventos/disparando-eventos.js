@@ -3,8 +3,8 @@ $(function() {
 	var listaAtividades = $('#lista-atividades');
 
 	//o evento keyup quando a tecla é solta
-	atividade.on('keyup', function(e) {
-		var keyCode = e.keyCode;
+	atividade.on('keyup', function(event) {
+		var keyCode = event.keyCode;
 
 		// se a tecla pressionada for enter
 		if (keyCode === 13) {
