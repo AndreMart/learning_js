@@ -13,3 +13,9 @@ nomes[3] = ["MArta"];
 
 console.log(nomes.length);
 
+console.log(nomes)
+
+nomes.push('André')
+
+console.log(nomes)
+

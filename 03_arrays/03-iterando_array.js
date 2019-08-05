@@ -6,8 +6,8 @@ for(var i = 0; i<nomes.length; i++) {
 }
 
 //utilizando o forEach do JS
-
-nomes.forEach(function(element){
-	console.log("[ "+ element + "]");
+nomes.forEach(function(element,i){
+	i+=1
+	console.log("[ "+ i + element + "]");
 });
 
