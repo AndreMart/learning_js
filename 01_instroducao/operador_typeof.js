@@ -1,5 +1,3 @@
-// ees operador retorna o tipo de uma variável 
-
 var m = "conteudo da var";
 console.log(typeof(m));
 
