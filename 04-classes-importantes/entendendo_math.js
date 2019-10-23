@@ -1,10 +1,3 @@
-//formas de se criar uma função em JS
-
-//primeira forma de se declarar uma função em JS
-function nomeFuncao(argumentos) {
-	return;
-}
-
 //entendendo o objeto Math
 
 // para se retornar o menor valor de determinada entrada
