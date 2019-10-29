@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alterador de Textos</title>
+    <script>
+        window.onload = function () {
+            var btn1 = document.getElementById("mai");
+            var btn2 = document.getElementById("separa");
+            var resul = document.getElementById("resultado");
+
+            btn1.onclick = capsLock;
+            btn2.onclick = separar;
+        }
+
+        function capsLock() {
+            document.getElementById("resultado").innerHTML = document.getElementById("texto").value.toUpperCase()
+        }
+        function separar() {
+            document.getElementById("resultado").innerHTML = document.getElementById("texto").value.toUpperCase().split(" ").join("<br>")
+        }
+    </script>
+
+</head>
+
+<body>
+    <form>
+        <textarea name="texto" id="texto" cols="50" rows="10">Olá Mundo</textarea><br>
+        <input type="button" name="mai" id="mai" value="Maiúscula"></button>
+        <input type="button" name="separa" id="separa" value="Separar"></button>
+    </form>
+    <div id="resultado"></div>
+</body>
+
+</html>

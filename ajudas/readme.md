@@ -1,0 +1,1 @@
+### ajudas a colegas de foruns e entre outros
