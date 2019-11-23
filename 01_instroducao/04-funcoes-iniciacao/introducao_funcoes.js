@@ -41,7 +41,7 @@ console.log(y)
 
 //agora vamos avançar um pouco em uma função
 /*
-	1) atribuimos a função a variável
+	1) atribuimos a função a variável fatorial
 	2) criamos a função fac com o parametro numero
 	3) se for menor de 2 retornamos 1
 	4) se não com o parametro numero multiplicamos pelo numero menos 1
