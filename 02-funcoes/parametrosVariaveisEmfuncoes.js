@@ -8,7 +8,7 @@ function soma() {
     return soma
 }
 //não passando parametro nenhum
-console.log(soma())
+console.log(soma(), soma(2,2))
 
 // concatenando strings
 console.log(soma(" A ", "B ", " C"))
