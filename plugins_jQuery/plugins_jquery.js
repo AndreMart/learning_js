@@ -19,7 +19,6 @@ $(function() {
 		} else {
 			total = valor;
 		}
-
 		totalMascara.maskMoney(mascaraConfig);
 		totalMascara.maskMoney('mask', total);
 		totalElement.innerHTML = totalMascara.val();
