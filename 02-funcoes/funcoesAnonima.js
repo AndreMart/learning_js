@@ -8,3 +8,11 @@ const soma2 = function(x, y, somando = soma) {
     return console.log(somando(x,y))
 }
 soma2(3,4)
+
+const pessoa = {
+    falar:function(){
+        console.log("EEEEi")
+    }
+}
+
+pessoa.falar()
