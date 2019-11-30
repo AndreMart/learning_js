@@ -10,7 +10,7 @@ var pedro = {
 }
 
 console.log(pedro);
-
+// simples assim para apagar um atributo de um estado
 delete pedro.nome;
 delete pedro.endereco;
 

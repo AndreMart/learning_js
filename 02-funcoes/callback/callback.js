@@ -1,9 +1,10 @@
 //primeiro exemplo de calback
 const nomes = ["MAMAO", "Goiaba", "maçã"]
-function imprimeNomes(nome, indice){
+function imprimeNomes(nome, indice) {
     console.log(indice+1 +" - ", nome)
 }
+//chamando um calback
 nomes.forEach(imprimeNomes)
 console.log("#############################################################")
-
-nomes.forEach((nome, indice)=>{console.log(indice+1 +" - ", nome)})
+// calback a partir de uma função de seta
+nomes.forEach((nome, indice)=>{console.log(indice+1 + " - ", nome)})

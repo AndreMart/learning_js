@@ -5,5 +5,3 @@ function Point(x, y) {
 // para referenciar essa função construtora usamos a palavra chave new como abaixo
 
 let p = new Point(1, 1)
-
-console.log(p)

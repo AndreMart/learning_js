@@ -2,7 +2,7 @@ var pedro = {
 	nome:"Pedro Roberto",
 	idade:34,
 	email:"teste@gmail.com",
-	comparaEmail : function(objeto) {
+	comparaEmail(objeto) {
 		return this.email === objeto.email;
 	}
 }
@@ -14,5 +14,4 @@ var maria = {
 }
 
 //comparando objetos em javascript
-
 console.log(pedro.comparaEmail(maria));

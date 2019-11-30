@@ -1,15 +1,13 @@
 //function declaration
-
 function somar(a, b) {
 	return a + b;
 }
-
+// com a palavra reservada arguments é possível recuperar argumentos mesmos, que eles não tenham sido declarados
 function pegandoArguments() {
 	console.log("argumentos da função ->", arguments);
 }
 
-//function expression
-
+//função anonima atribuida a uma variável
 var subtrair  = function(a, b) {
 	return a - b;
 }

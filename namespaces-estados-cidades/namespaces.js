@@ -1,6 +1,6 @@
-var AlgaWorks = AlgaWorks || {};
+var Brasil = Brasil || {};
 
-AlgaWorks.Estado = (function() {
+Brasil.Estado = (function() {
 	//cria um construtor dessa função
 	function Estado() {
 		//atrela ao id do  select
@@ -48,7 +48,7 @@ AlgaWorks.Estado = (function() {
 })();
 
 //
-AlgaWorks.Cidade = (function() {
+Brasil.Cidade = (function() {
 	//no construtor eu atrelo ao combo de cidade
 	function Cidade(estado) {
 		this.comboCidade = $('#combo-cidade');
@@ -102,9 +102,9 @@ AlgaWorks.Cidade = (function() {
 $(function() {
 	//crio um novo estado
 	//e chamo sua iniciação
-	var estado = new AlgaWorks.Estado();
+	var estado = new Brasil.Estado();
 	estado.iniciar();
 
-	var cidade = new AlgaWorks.Cidade(estado);
+	var cidade = new Brasil.Cidade(estado);
 	cidade.iniciar();
 });
