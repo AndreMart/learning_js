@@ -1,3 +1,4 @@
+// Declarando variáveis com let
 let a = 20;
 let b = 20;
 

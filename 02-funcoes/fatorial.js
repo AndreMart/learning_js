@@ -21,3 +21,7 @@ function fatorial2(n)
     return product    
 }
 console.log(fatorial2(5))
+
+//usando arow function
+fat = (n)=>{n < 2 ? 1 : n * fat(n - 1)}
+fat(5)

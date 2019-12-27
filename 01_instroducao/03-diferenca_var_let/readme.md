@@ -1,4 +1,4 @@
-### Qual a diferença entre var e let?
+### Qual a diferença entre VAR e LET?
 
 > para conseguirmos entender a diferença entre esses dois jeitos de declarar variáveis é preciso
 > entender sobre escopo

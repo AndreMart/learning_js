@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="Faça seu filtro" type="text" name="filtro" id="filtro" onkeyup="search()">
+    <table id="the-table">
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Age</th>
+        </tr>
+        
+      </table>
+</body>
+
+<script>
+
+    let obj = [
+        {
+        firstName: "Mauro",
+        lastName: "Roma",
+        age: 25
+        },
+        {
+        firstName: "Alberto",
+        lastName: "Rosa",
+        age: 28
+        },
+        {
+        firstName: "Joana",
+        lastName: "Lima",
+        age: 29
+        },
+        {
+        firstName: "Pedro",
+        lastName: "Mariano",
+        age: 25
+        },
+    ]
+    let line = document.getElementById("the-table")
+    line.style.display = "none"
+    
+
+    function search()
+    {
+        let filtro = document.getElementById("filtro").value
+        line.style.display = ""
+
+        for (let i in obj) {
+            if(obj[i].firstName === filtro || obj[i].lastName === filtro || obj[i].age === filtro) {
+                line.innerHTML += "<tr>"
+                line.innerHTML += "<td>"+obj[i].firstName+"</td>" + "<td>"+obj[i].lastName+"</td>" + "<td>"+obj[i].age+"</td>"
+                line.innerHTML += "</tr>"
+            } else {
+
+            }
+            
+        
+    }
+
+
+    }
+
+
+
+</script>
+</html>

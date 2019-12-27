@@ -14,5 +14,8 @@ var capitalizar2 = function() {
 	nome = "SuperMidias".toUpperCase();
 }
 
+console.log("nome", nome);
+
+capitalizar(); //não se aplica
 capitalizar2();
 console.log("nome", nome);
