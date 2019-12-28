@@ -8,3 +8,8 @@ function criaPessoa()
     }
 }
 console.log(criaPessoa())
+
+function criarProduto(nome, preco, qtd, desconto = 5) {
+    return {nome, preco, qtd, desconto}
+}
+console.log(criarProduto("PC", 1452, 14))   
