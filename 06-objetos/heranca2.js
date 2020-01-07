@@ -4,6 +4,7 @@ const filho = {__proto__:pai, atributo3:"c"}
 console.log(pai.atributo1)
 console.log(filho.atributo2)
 console.log(filho.atributo3)
+console.log(filho.atributo1)
 
 const carro = {
     modelo: "comum",
@@ -24,6 +25,7 @@ const volvo = {
         return `${super.status()} Esse é bom`
     }
 }
+// podemos definir o __proto__ de um objeto dessa forma
 Object.setPrototypeOf(ferrari, carro)
 Object.setPrototypeOf(volvo, carro)
 

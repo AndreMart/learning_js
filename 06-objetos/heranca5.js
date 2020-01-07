@@ -1,6 +1,7 @@
 console.log(typeof Array)
 console.log(typeof String)
 console.log(typeof Boolean)
+console.log(typeof String)
 
 // como prototype podemos acrescentar novas funcionálidades a uma funtion pois funtion tem o prototype
 // ex: vamos reveter uma palavra

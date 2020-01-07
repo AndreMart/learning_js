@@ -1,5 +1,7 @@
 const pai = {nome: "André Martins", corCabelo : "Preto"}
+// podemos criar um objeto diretamente por um proto
 const filha1 = Object.create(pai)
+
 filha1.nome = "ana paula"
 console.log(filha1.nome, filha1.corCabelo)
 

@@ -20,7 +20,7 @@ Object.defineProperty(pessoa, "peso",{
 })
 console.log(pessoa.peso)
 
-//função Object.assing é uma espécia de concatenação
+//função Object.assing é uma espécie de concatenação
 const dest = {a:1}
 const o1 = {b:2}
 const o2 = {c:3, a:4}

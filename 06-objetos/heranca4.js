@@ -1,3 +1,4 @@
+// podemos criar objetos a partir de funçoes construtoras˜
 function ObjetoContrutor() {
     this.nome = "André Martins"
 }
