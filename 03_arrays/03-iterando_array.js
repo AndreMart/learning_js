@@ -7,7 +7,7 @@ for(var i = 0; i<nomes.length; i++) {
 
 //utilizando o forEach do JS
 nomes.forEach(function(element,i){
-	i+=1
+	i++
 	console.log("[ "+ i + element + "]");
 });
 
