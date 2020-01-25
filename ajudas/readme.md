@@ -1,0 +1,1 @@
+### ajudas com respostas para comunidade
