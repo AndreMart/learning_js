@@ -1,0 +1,8 @@
+{
+    "db": {
+        "server":"localhost",
+        "port": 8080,
+        "name": "server-one"
+
+    }
+}
