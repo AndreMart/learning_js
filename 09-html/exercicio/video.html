@@ -1,0 +1,69 @@
+<video id="meuVideo" autoplay controls controlsList="nodownload" width="800">
+    <source src="http://files.cod3r.com.br/curso-web/video.mp4">
+
+</video>
+
+<div am-web="meuVideo" class="progresso">
+    <div></div>
+</div>
+
+<div>
+    <button am-play="meuVideo">Play</button>
+    <button am-pause="meuVideo">Pause</button>
+</div>
+
+<style>
+
+    .progresso {
+        height: 20px;
+        width: 500px;
+        border: solid 1px #444;
+        margin: 10px;
+    }
+    .progresso>div {
+        background-color: blueviolet;
+        color: #FFF;
+        height: 100%;
+        text-align: right;
+        font-size: 14px;
+        width: 10px;
+    }
+
+
+</style>
+
+<script>
+
+    function play() {
+        const pl = document.querySelector('[am-play]')
+        const video = document.getElementById('meuVideo')
+        pl.onclick = function() {
+            return video.play()
+        }
+    }
+
+    function pause() {
+        const p = document.querySelector('[am-pause]')
+        const video = document.getElementById('meuVideo')   
+        p.onclick = function() {
+            return video.pause()
+        }
+
+    }
+
+    function barraProgresso() {
+        setInterval(() => {
+            const video = document.getElementById('meuVideo')
+            const percentual = (video.currentTime / video.duration) * 100
+            const valorDiv = document.querySelector('[am-web]>div')
+            valorDiv.style.width = `${percentual}%`
+            valorDiv.innerHTML = `${percentual.toFixed(1)}%`
+            
+        }, 500);
+
+    }
+    play()
+    pause()
+    barraProgresso()
+
+</script>

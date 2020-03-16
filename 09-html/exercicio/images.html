@@ -1,0 +1,96 @@
+<div am-martins>
+
+    <p>
+        <img src="../img/18_racas_de_cachorro_de_pequeno_porte_23043_600.jpg" width="300px">
+    </p>
+
+    <p>
+        <img src="../img/as-menores-racas-de-cachorro-do-mundo.jpg" width="300px">
+    </p>
+
+    <p>
+        <img src="../img/phpThumb_generated_thumbnail.jpeg" width="300px">
+    </p>
+
+    <p>
+        <img src="../img/unnamed.jpg" width="300px">
+    </p>
+
+</div>
+
+<style>
+    p {
+        position: absolute;
+    }
+
+    p {
+        display: none;
+    }
+</style>
+
+<script>
+    /* 
+        
+     */
+    function mover(elem, inicio, fim, passo, callback) {
+        const novoInicio = inicio - passo
+        if (novoInicio >= fim) {
+            elem.style.left = novoInicio + 'px'
+            setTimeout(() => mover(elem, novoInicio, fim, passo, callback), 7)
+        }
+        else {
+            callback()
+        }
+    }
+
+    // const p = {nome: document.querySelector('[am-martins] > p')}
+    // p.nome.style.display = 'block'
+    // mover(p.nome, 1500, -300, 5, () => {
+    //     console.log("terminou")
+
+    // })
+
+    /* 
+        selecionamos a tag
+        convertemos em um array
+        chamamos a função exibirSlide passando a lista e o elemento zero
+     */
+
+    function slider() {
+        const p = document.querySelectorAll('[am-martins] > p')
+        const slides = Array.from(p)
+        exibirSlide(slides, slides[0])
+    }
+    
+    /* 
+        atribuimos o display de bloco para o elemento em questão
+        pegamos a largura da tela
+        pegamos a largura do elemento sendo negativo
+        definimos o ponto de inicio 
+        chamamos a função mover
+     */
+    function exibirSlide(slides, slide) {
+        slide.style.display = 'block'
+
+        const inicio = innerWidth
+        const fim =-slide.clientWidth
+
+        slide.style.left = `${inicio}px`
+
+        mover(slide, inicio, fim, 5, ()=>{
+           // slide.style.disply = 'none'
+            exibirSlide(slides, getProx(slides, slide))
+        })
+    }
+
+    /* 
+    
+     */
+
+    function getProx(lista, atual){
+        const i = lista.indexOf(atual) + 1
+        return i < lista.length ? lista[i] : lista[0]
+    }
+
+    slider()
+</script>
