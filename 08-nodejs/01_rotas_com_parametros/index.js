@@ -15,3 +15,8 @@ app.get('/produtos',(req, res, next) => {
 app.get('/produtos',(req, res, next) => {
     res.send({nome:'Computador 2', valor:147147})
 })
+
+app.get('/queryparam',(req, res)=>{
+    const nome = req.query['nome']
+    return res.send(nome != null ? nome : "<h1> Você precisa passar o parametro correto</h1>")
+})

@@ -13,7 +13,7 @@ app.get('/produtos',(req, res, next) => {
 })
 
 app.listen(porta, () => {
-    console.log(`Servidor Executando na porta ${porta}`)
+    console.log(`http://localhost:${porta}`)
 })
 
 module.exports = app

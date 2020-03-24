@@ -2,7 +2,7 @@ let notas = [7,8,6,8,10]
 
 // com o foreach podemos percorrer facilmente um array
 // em um foreach recemos 3 parametros, o conteúdo, o indice e por fim o próprio array
-notas.forEach(function(nota, indice){
+notas.forEach(function(nota, indice) {
     console.log(`${indice + 1} ) ${nota}`)
 })
 
