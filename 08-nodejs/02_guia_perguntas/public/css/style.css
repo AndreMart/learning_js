@@ -1,4 +1,6 @@
 body {
-    background-color: darkgray;
-    
+    background-color: azure;
+}
+.space-top {
+    margin-top: 10px;
 }

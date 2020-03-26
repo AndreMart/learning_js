@@ -1,26 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testes EJS</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
+<%- include('templates/header.ejs') %> 
 <body>
-    <h1>Guia perguntas</h1>
-    <p>Olá <%= nome %> <%= idade %></p>
-    <h1>Lista de perguntas</h1>
+    <%- include('templates/nav.ejs') %>
 
-    <% if(condicao){ %>
-        <h1>Tem acesso</h1>
-    <% } else {%>
-        <h2>não é permitido</h2>
-    <% } %>
-    
-    <% produtos.forEach((produto)=>{ %>
-        <h2><%= produto.nome %>, <%= produto.preco %>  </h2> 
-    <% }) %>
-
-    <img src="/img/teste.jpg" alt="teste">
-</body>
-</html>
+    <div class="container">
+        <div class="row">
+            Home
+        </div>
+    </div>
+    <%- include('templates/scripts.ejs') %>

@@ -1,0 +1,37 @@
+<%- include('templates/header.ejs') %>
+
+<body>
+    <%- include('templates/nav.ejs')  %>
+    <div class="container space-top">
+        <div class="card-header">
+            <h3>Pergunta selecionada</h3>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <%= pergunta.title %>
+                <hr>
+                <%= pergunta.description %>
+            </div>
+        </div>
+        <br>
+        <% respostas.forEach(resposta => { %>
+            <div class="card">
+                <div class="card-body">
+                    <h3>Resposta a questão</h3>
+                    <p><%= resposta.corpo %> </p>
+                    <p>#ID<%= resposta.id %> </p>
+                    <hr>
+                </div>
+            </div>
+            <hr>
+        <% }) %>
+        <br>
+        <form action="/resposta/" method="POST">
+            <label>Nova resposta</label>
+            <textarea name="corpo" class="form-control"></textarea>
+            <input type="hidden" name="id" value="<%= pergunta.id %>">
+            <hr>
+            <button type="submit" class="btn btn-success"> Responder</button>
+        </form>
+    </div>
+    <%- include('templates/scripts.ejs') %>
