@@ -7,7 +7,82 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
-        /* ... */
+        body {
+            background-color: darkgrey;
+            margin: 0 auto;
+        }
+
+        .logo,
+        .menu-toggle,
+        .menu,
+        li,
+        .autenticacao {
+            display: inline-block;
+        }
+
+        .menu,
+        a {
+            color: #FFF;
+            text-decoration: none;
+            font-family: 'Oswald', sans-serif;
+            text-align: center;
+        }
+
+        .menu>ul>li>a {
+            padding: 10px;
+        }
+
+        .menu>ul>li>a:hover,
+        .autenticacao>a:hover {
+            background-color: cornflowerblue;
+        }
+
+        .selected {
+            background-color: cornflowerblue;
+        }
+
+        .cabecalho {
+            padding: 0px;
+            background-color: #111;
+            padding: 10px;
+        }
+
+        aside>a {
+            margin-right: 10px;
+        }
+
+        .autenticacao {
+            display: inline-block;
+            float: right;
+            margin-top: 15px;
+            margin-right: 5px;
+        }
+
+        .destaque {
+            background-color: brown;
+            padding: 5px;
+            border-radius: 19%;
+        }
+
+        img {
+            width: 120px;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        @media (max-width: 559px) {
+            .menu-toggle {
+                display: inline-block;
+                float: right;
+            }
+            .menu,
+            .autenticacao {
+                display: none;
+            }
+        }
+
     </style>
 </head>
 
@@ -44,7 +119,12 @@
     </header>
 
     <script>
-        // ...
+        window.onclick = e => {
+            const newLink = document.querySelector(`.menu a[href='${e.target.hash}'`)
+            othersLink = document.querySelector(".selected");
+            othersLink != null ?  othersLink.classList.remove("selected") : ''
+            newLink != null ? newLink.classList.add('selected') : '' 
+        }
     </script>
 </body>
 
