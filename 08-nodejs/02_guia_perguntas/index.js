@@ -20,6 +20,7 @@ app.set('view engine', 'ejs') // view engine
 app.use(express.static('public')) // meus statics
 
 app.get('/perguntas', (req, res) => {
+    
     Pergunta.findAll({
         raw: true, order: [
             ['id', 'DESC']

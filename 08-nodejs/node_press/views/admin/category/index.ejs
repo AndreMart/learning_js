@@ -2,14 +2,46 @@
 
 <body>
     <%- include('../../templates/nav.ejs') %>
-
     <div class="container">
-        <div class="row">
-            <form action="/save-category" method="POST">
-            <h2>Cadatro de Categoria</h2>
-            <input type="text" class="form-control" name="title">
-            <button class="btn btn-succes" type="submit">Cadatrar</button>
-            </form>
-        </div>
+        <a href="/create-category" class="btn btn-success">Criar categoria</a>
+        <hr>
+        Lista de Categorias
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#ID</th>
+                    <th>Name</th>
+                    <th>Slug</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% categorys.forEach(cat=>{ %>
+                    <tr>
+                        <td><%= cat.id %> </td>
+                        <td><%= cat.title %> </td>
+                        <td><%= cat.slug %> </td>
+                        <td> 
+                            <a href="/category/edit/<%= cat.id %>">Editar</a>
+
+                            <form action="/delete/category" method="POST" style="display: inline;" onsubmit="deleteConfirm(event, this)">
+                                <input type="hidden" name="id" value="<%= cat.id %>">
+                                <button type="submit" class="btn btn-danger">Excluir</button> 
+                            </form>
+                        </td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
     </div>
     <%- include('../../templates/scripts.ejs') %>
+
+    <script>
+        function deleteConfirm(event, form) {
+            event.preventDefault()
+            const confirmed = confirm("Deseja deletar");
+            if(confirmed) {
+                form.submit()
+            }
+        }
+    </script>
