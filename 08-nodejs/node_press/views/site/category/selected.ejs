@@ -3,9 +3,6 @@
 <body>
     <%- include('../../templates/site/nav.ejs') %>
     <div class="container">
-        <% if(!articles) {%>
-            Não foram encontrados artigos
-        <% } %>     
         <h1>Artigos</h1>
         <% articles.forEach(article=>{ %>
             <div class="card">
