@@ -5,18 +5,19 @@
 
     <div class="container">
         <div class="row">
-            <form action="/save-article" method="POST">
+            <form action="/update-article" method="POST">
                 <h2>Cadatro de artigos</h2>
                 <select name="idCategory">
                     <% categories.forEach((category, index) => {%>
-                    <% if(index === 1 && catselected != undefined) { %>
-                        <option value="<%= catselected.id %> "><%= catselected.title %></option>
+                    <% if(article.categoryId === category.id) { %>
+                        <option value="<%= category.id %>" selected><%= category.title %></option>
                     <% }else {%>
                         <option value="<%= category.id %> "><%= category.title %></option>
                     <%} %>
-                    <% index++ }) %>
+                    <% }) %>
                 </select>
                 <input type="text" class="form-control" name="title" value="<%= article.title %>"> <br>
+                <input type="hidden" name="idArticle"value=" <%= article.id %>">
                 <textarea name="body" placeholder="Coloque seu artigo aqui" class="form-control"
                     id="article"><%= article.body %></textarea>
                 <button class="btn btn-succes" type="submit">Cadatrar</button>

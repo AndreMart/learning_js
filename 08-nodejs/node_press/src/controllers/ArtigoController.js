@@ -2,6 +2,7 @@ const express = require("express")
 const router = express.Router()
 const Article = require('../models/article/Article')
 const Category = require('../models/category/Category')
+
 router.get("/article", (req, res) => {
     Article.findAll({
         include: [{
@@ -63,10 +64,11 @@ router.get('/article/edit/:id', (req, res) => {
                 if (categories != undefined) {
                     Category.findByPk(article.categoryId).then(catselected => {
                         if (catselected != undefined) {
-                            res.render('admin/article/editArticle', { 
-                                article: article, 
-                                categories: categories, 
-                                catselected : catselected })
+                            res.render('admin/article/editArticle', {
+                                article: article,
+                                categories: categories,
+                                catselected: catselected
+                            })
                         }
                     })
                 }
@@ -75,8 +77,23 @@ router.get('/article/edit/:id', (req, res) => {
     })
 })
 router.post('/update-article', (req, res) => {
+    const idCategoy = req.body.idCategory
+    const title = req.body.title
+    const idArticle = req.body.idArticle
+    const body = req.body.body
+    Article.update({
+        id:idArticle,
+        title:title,
+        slug: title.replace(/ /g,'-'),
+        body:body,
+        categoryId:idCategoy,
+    }, {where:{id:idArticle}}).then(() => {
+        res.redirect('/article')
+    }).catch(() => {
 
+    })
 })
+
 router.post('/delete/article', (req, res) => {
     const id = req.body.id
     if (id != undefined && id != null) {
