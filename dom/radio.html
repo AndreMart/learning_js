@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #02</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body class="conteudo exercicio">
+
+    <body>
+        <h1>Height and Sex</h1>
+        <p>Type the height and sex: </p>
+
+        <div>
+
+            <input type="text" name="height" class="height" placeholder="Centimeter" minlength="3" maxlength="3">
+            <input type="radio" name="op1" value="Man" class="sex"><label>Man</label>
+            <input type="radio" name="op1" value="Woman" class="sex"><label>Woman</label>
+            <br>
+
+            <input type="text" name="height" class="height" placeholder="Centimeter" minlength="3" maxlength="3">
+            <input type="radio" name="op2" value="Man" class="sex"><label>Man</label>
+            <input type="radio" name="op2" value="Woman" class="sex"><label>Woman</label>
+            <br>
+
+            <input type="text" name="height" class="height" placeholder="Centimeter" minlength="3" maxlength="3">
+            <input type="radio" name="op3" value="Man" class="sex"><label>Man</label>
+            <input type="radio" name="op3" value="Woman" class="sex"><label>Woman</label>
+            <br>
+
+            <input type="text" name="height" class="height" placeholder="Centimeter" minlength="3" maxlength="3">
+            <input type="radio" name="op4" value="Man" class="sex"><label>Man</label>
+            <input type="radio" name="op4" value="Woman" class="sex"><label>Woman</label>
+            <br>
+
+            <input type="text" name="height" class="height" placeholder="Centimeter" minlength="3" maxlength="3">
+            <input type="radio" name="op5" value="Man" class="sex"><label>Man</label>
+            <input type="radio" name="op5" value="Woman" class="sex"><label>Woman</label>
+        </div>
+        <br>
+        <button id="btn">Submit!</button>
+        <script>
+            // selecionamos todos os inputs sex
+            let radioSelector = document.querySelectorAll('.sex')
+            
+            // pegamos o evento de click e interagimos
+            document.querySelector('#btn').onclick = e => { // a cada click no botão
+                let man   = 0 // parametros de saída 
+                let woman = 0 // parametros de saída 
+                radioSelector.forEach(item => { // cada item do radio que teve mudança de valor
+                    if(item.checked && item.value=="Man") { // comparação por value e checado
+                        man++
+                    }
+                    if(item.checked && item.value=="Woman") {
+                        woman++
+                    }
+                })
+                console.log('Man ' + man, 'Woman ' + woman) // impressão console
+            }
+        </script>
+    </body>
+
+</html>
