@@ -1,3 +1,7 @@
+//************ +__+ ************///
+//* DATA DA REVISÃO 15/09/2020 *///
+//************ +__+ ************///
+
 /*
     Não ha muita utilidade, basicamente o Hoisting do javascript joga a declaração
     para a parte superior do objeto window

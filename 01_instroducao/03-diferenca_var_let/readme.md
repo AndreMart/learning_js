@@ -5,7 +5,7 @@
 
 ### Escopo
 
->  Podemos entender escopo como paredes {chaves} que separam coisas {valores} que existem dentro
+>  Podemos entender escopo como paredes {CHAVES} que separam coisas {VALORES} que existem dentro
 > desses chaves.
 > Dentro de um arquivo js podemos ter variaveis, constantes, funções e objetos
 #### var
@@ -18,7 +18,7 @@
 > fora das chaves {} veja no arquivo variaveislet.js
 
 #### Recomendação
-> nunca utilizar var de forma global, imagine, se ela está de forma "SOLTA" poderá ser
+> nunca utilizar var de forma global, imagine, se ela está de forma "SOLTA" pode acontecer algo estranho com o contexto global que se está trabalhando
 > alterada pelo objeto window de seu navegador, geralmente sempre utilizamos nomes parecidos para
 > declarar variáveis então com certeza em um mesmo projeto você poderá ter var nome para isso ou
-> aquilo.
+>aquilo.
