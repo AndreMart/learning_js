@@ -1,3 +1,7 @@
+//************ +__+ ************///
+//* DATA DA REVISÃO 03/01/2021 *///
+//************ +__+ ************///
+
 //formas de se criar uma função em JS
 
 //primeira forma de se declarar uma função em JS
@@ -20,7 +24,7 @@ var carro = {nome:'Golzao', modelo: 'Gol', ano: 1999}
 
 //criamos nossa função passamos o objeto e então alteramos o carro.nome
 function addCarro(carro) {
-	return carro.nome = 'Golzimvei'
+	return carro.nome = 'Golzimveiss'
 }
 //declaramos duas variáveis que nesse momento estão undefined
 var x, y
@@ -50,6 +54,8 @@ console.log(y)
 	// Fatorial :)
 */
 var fatorial = function fac(numero) {return numero < 2 ? 1 : numero * fac(numero-1)}
+
+// teste fatorial
 console.log(fatorial(4))
 
 

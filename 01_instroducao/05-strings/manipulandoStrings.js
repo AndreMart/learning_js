@@ -1,41 +1,41 @@
+//************ +__+ ************///
+//* DATA DA REVISÃO 03/01/2021 *///
+//************ +__+ ************///
+
 var s = "the winter is coming";
 
-//pegando o tamanho da string
-console.log(s.length);
+console.log(s.length); // tamanho da string
 
-//pegando o indice de uma palavra
-console.log(s.indexOf("coming"));
+console.log(s.indexOf("coming")); // indice de uma palavra
 
-//Pegando a primeira posição de um caractere
-console.log(s.lastIndexOf("the"));
+console.log(s.lastIndexOf("winter")); // primeira posição de um caractere em uma string aplicada
 
-//cortando uma palavra entre intervalos
-console.log(s.slice(4, 12));
+console.log(s.slice(4, 12)); //cortando uma palavra entre intervalos, sempre a partir do primeiro caractere da string
 
-//cortando a partir de um indice (o parametro 6 é a partir do 4)
-console.log(s.substr(4, 6));
+console.log(s.substr(4, 6)); //cortando a partir de um indice (o parametro 6 é a partir do 4)
 
-console.log(s.substring(1, 5));
+console.log(s.substring(0, 5)); // pegando de um indice até outro indice aplicado, pode ser utilizado para reduzir strings
 
-//replace
-console.log(s.replace("winter", "summer"));
+console.log(s.substring(0, 5), "..."); // outro exemplo seria, muito utilizado em sites para não quebrar o layout
 
-//upperCase
-console.log(s.toUpperCase());
+console.log(s.replace("winter", "summer")); //replace
 
-//LowerCase
-console.log(s.toLowerCase());
+console.log(s.toUpperCase()); //upperCase
 
-//concatenar
-console.log(s.concat("!", "outra String e assim por diante para concatenar"));
+console.log(s.toLowerCase()); //LowerCase
 
-var novaString = "Ned,Jon,Robb,Sansa,Bryan";
+console.log(s.concat("!", "outra String e assim por diante para concatenar")); //concatenar
 
-//separar por determinado caractére
-console.log(novaString.split(","));
+var novaString = "Ned,Jon,Robb,Sansa,Bryan"; // criando uma string, mas poderia ser recebendo uma string
+
+const arr = novaString.split(",");
+console.log(arr[0]); // podemos pegar a string dessa forma, também poderíamos fazer um foreach para a mesma
+
+console.log(novaString.split(",")); //separar por determinado caractére
 
 let novaString2 = "André";
-const n = [...novaString2];
-console.log(n);
-const n2 = n.map((n, i) => `${n.toLocaleUpperCase()}${i}`);
+const n = [...novaString2]; // espalhamento com spred e já separa por virgula, bem estranho 
+console.log(n, "essa");
+
+const n2 = n.map((n, i) => `${n.toLocaleUpperCase()}${i}`); // map para cada item adicionando maiúsculas e indice
 console.log(n2);
