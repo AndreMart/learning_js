@@ -1,3 +1,7 @@
+//************ +__+ ************///
+//* DATA DA REVISÃO 03/01/2021 *///
+//************ +__+ ************///
+
 //para verificar qual é o tipo de dado utilizamos o typeof
 var m = "conteudo da var";
 console.log(typeof(m));

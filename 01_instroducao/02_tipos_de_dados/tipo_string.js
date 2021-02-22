@@ -6,8 +6,8 @@
 var a = "tamamho de uma string";
 console.log(a.length); // resultado 21
 
-var b = "Olá sei como pegar o indice de uma palavra em Js";
 // Para pegar de onde se parte a ocorrencia se faz
+var b = "Olá sei como pegar o indice de uma palavra em Js";
 console.log(b.indexOf("pegar")); // resultado 13
 
 // Para pegar de onde se finaliza a ocorrencia

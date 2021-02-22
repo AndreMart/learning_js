@@ -1,3 +1,7 @@
+//************ +__+ ************///
+//* DATA DA REVISÃO 03/01/2021 *///
+//************ +__+ ************///
+
 // vamos criar uma função e a partir dela vamos instanciar alguns objetos
 
 function Pessoa(nome, idade, sobrenome) {
@@ -21,9 +25,7 @@ console.log(joao)
 //na verdade todo objeto em js é uma função
 
 
-//nesse exemplo declaramos uma função e não estamos colocando seu retorno como publico, não utilizamos
-//o this
-function Cidade(nome) {
+function Cidade(nome) { //nesse exemplo declaramos uma função e não estamos colocando seu retorno como publico, não utilizamos o this
     return nome = nome
 }
 

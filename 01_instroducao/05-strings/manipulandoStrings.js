@@ -1,10 +1,16 @@
+//************ +__+ ************///
+//* DATA DA REVISÃO 03/01/2021 *///
+//************ +__+ ************///
+
 var s = "the winter is coming";
 
-//pegando o tamanho da string
-console.log(s.length);
+console.log(s.length); // tamanho da string
 
-//pegando o indice de uma palavra
-console.log(s.indexOf("coming"));
+console.log(s.indexOf("coming")); // indice de uma palavra
+
+console.log(s.lastIndexOf("winter")); // primeira posição de um caractere em uma string aplicada
+
+console.log(s.slice(4, 12)); //cortando uma palavra entre intervalos, sempre a partir do primeiro caractere da string
 
 //Pegando a primeira posição de um caractere
 console.log(s.lastIndexOf("the"));
@@ -20,22 +26,26 @@ console.log(s.substring(1, 5));
 //replace
 console.log(s.replace("winter", "summer"));
 
-//upperCase
-console.log(s.toUpperCase());
+console.log(s.toLowerCase()); //LowerCase
 
-//LowerCase
-console.log(s.toLowerCase());
+console.log(s.concat("!", "outra String e assim por diante para concatenar")); //concatenar
 
-//concatenar
-console.log(s.concat("!", "outra String e assim por diante para concatenar"));
+var novaString = "Ned,Jon,Robb,Sansa,Bryan"; // criando uma string, mas poderia ser recebendo uma string
 
-var novaString = "Ned,Jon,Robb,Sansa,Bryan";
+const arr = novaString.split(",");
+console.log(arr[0]); // podemos pegar a string dessa forma, também poderíamos fazer um foreach para a mesma
 
-//separar por determinado caractére
-console.log(novaString.split(","));
+console.log(novaString.split(",")); //separar por determinado caractére
 
 let novaString2 = "André";
+<<<<<<< HEAD
 const n = [...novaString2];
 console.log(n);
 const n2 = n.map((n, i) => `${n.toLocaleUpperCase()}${i}`);
+=======
+const n = [...novaString2]; // espalhamento com spred e já separa por virgula, bem estranho 
+console.log(n, "essa");
+
+const n2 = n.map((n, i) => `${n.toLocaleUpperCase()}${i}`); // map para cada item adicionando maiúsculas e indice
+>>>>>>> e75f7e251c058e0c2a743ec39437ab58e797a24a
 console.log(n2);
