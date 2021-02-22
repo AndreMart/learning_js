@@ -8,11 +8,15 @@ if(0) {
 } else {
 	console.log("0 é falso");	
 }
+console.log("->" + !!true)
 
 // Outra forma de se ver o verdadeiro tipo de um boleano é
-console.log(!!0); // é estranho mas faz sentido
+
+console.log(" zero note note " + !!0); // é estranho mas faz sentido
 
 // Uma string vazia é false
+console.log(!!"");
+
 console.log(!!"");
 
 // Também é considerado false
