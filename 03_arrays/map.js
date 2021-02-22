@@ -16,5 +16,5 @@ console.log(newNotas)
 const soma5 = x => x + 5
 const soma1 = x => x + 1
 const notas2 = [1,5,8,10,9]
-const saidaNotas2 = notas.map(soma1).map(soma5)
+const saidaNotas2 = notas2.map(soma1).map(soma5)
 console.log(saidaNotas2)
