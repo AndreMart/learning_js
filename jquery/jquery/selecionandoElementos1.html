@@ -49,6 +49,16 @@
     </form>
 
     <script>
-        // ...
+        $('#feira').addClass('destaque').removeClass('destaque')
+        $('#feira li').addClass('destaque').removeClass('destaque')
+        $('[wm-obrigatorio]').addClass('destaque').removeClass('destaque')
+        $('li.opcional').addClass('destaque').removeClass('destaque')
+
+        $('form *').hide()
+        $('form :text').show()
+        $('form :password').show()
+        $('form :checkbox').show()
+        $('form :radio').show()
+        $('form :file').show()
     </script>
 </body>
