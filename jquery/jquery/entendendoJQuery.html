@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Entendendo jQuery</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+    <script src="js/jquery.js"></script>
+</head>
+
+<body class="conteudo exercicio">
+    <h1>Entendendo jQuery</h1>
+    <div>1</div>
+    <div>2</div>
+
+    <script>
+        $('div').hide(4000).show(5000).fadeOut(5000)
+
+        $.fn.meuPlugin = function () {
+            this.css('background-color', 'green')
+            return this
+        }
+        $('body').meuPlugin().fadeOut(5000)
+
+    </script>
+</body>
